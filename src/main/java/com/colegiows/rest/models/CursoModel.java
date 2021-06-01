@@ -23,6 +23,10 @@ public class CursoModel {
     @OneToMany(mappedBy = "curso", cascade = CascadeType.ALL)
     List<AsignaturaModel> asignaturas;
 
+	public CursoModel() {
+		super();
+	}
+
 	public Long getId() {
 		return id;
 	}

@@ -24,7 +24,10 @@ public class ProfesorModel {
 	@OneToMany(mappedBy = "profesor", cascade = CascadeType.ALL)
 	List<AsignaturaModel> asignaturas;
 	
-	
+	public ProfesorModel() {
+		super();
+	}
+
 	public int getId() {
 		return id;
 	}

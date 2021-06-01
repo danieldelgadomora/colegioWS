@@ -4,9 +4,8 @@ import java.util.List;
 
 import javax.persistence.*;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 
 @Entity
 @Table(name = "estudiante")
@@ -22,9 +21,12 @@ public class EstudianteModel {
     @JsonIgnore
     @ManyToMany(mappedBy = "estudiante", cascade = CascadeType.ALL)
     List<AsignaturaModel> asignatura;
-	
-   
-    public int getId() {
+    
+    public EstudianteModel() {
+    	super();
+    }
+
+	public int getId() {
 		return id;
 	}
 
@@ -88,7 +90,7 @@ public class EstudianteModel {
 		return "EstudianteModel [id=" + id + ", nombre=" + nombre + ", asignatura=" + asignatura + "]";
 	}
 
-	public EstudianteModel() {super();}
+	
 	
 	
 

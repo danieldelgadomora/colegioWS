@@ -36,6 +36,9 @@ public class ColegioModel {
 		this.nombre = nombre;
 	}
 	
+	public ColegioModel() {
+		super();
+	}
 
 	@Override
 	public int hashCode() {
